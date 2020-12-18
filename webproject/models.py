@@ -10,7 +10,8 @@ class Question(models.Model):
     answer = models.CharField(max_length=50, verbose_name='ответ')
     points = models.IntegerField(
         default=1,
-        verbose_name='балл за правильный ответ'
+        verbose_name='балл за правильный ответ',
+        validators=[MinValueValidator(0), ]
     )
     test = models.ForeignKey('Test', on_delete=models.CASCADE)
 
@@ -44,12 +45,11 @@ class QuestionAnswer(models.Model):
     )
     given_answer = models.CharField(max_length=50, verbose_name='ответ')
     total_points = models.IntegerField(
-        verbose_name='балл за правильный ответ'
+        verbose_name='балл за правильный ответ',
     )
     scored_points = models.IntegerField(
         default=0,
-        verbose_name='полученный балл',
-        validators=[MinValueValidator(0), ]
+        verbose_name='полученный балл'
     )
     testResult = models.ForeignKey('TestResult', on_delete=models.CASCADE)
 

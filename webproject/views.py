@@ -1,5 +1,6 @@
 # from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.contrib.auth.decorators import login_required
+from django.db.models import Sum
 from django.shortcuts import render, redirect
 # from django.urls import reverse_lazy
 # from django.utils.decorators import method_decorator
@@ -154,7 +155,11 @@ class TestDetailView(generic.DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['question_set'] = self.object.question_set.all()
+        question_set = self.object.question_set.all()
+        context['question_set'] = question_set
+        context['total_points'] = question_set.aggregate(
+            Sum('points')
+        )['points__sum']
         context['author'] = self.object.course.author
         return context
 

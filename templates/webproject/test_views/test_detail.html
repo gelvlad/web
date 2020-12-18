@@ -4,14 +4,19 @@
 
 {% block content %}
     <h1>{{ test.name }}</h1>
-    <h2>Вопросы</h2>
-    {% for question in question_set %}
-        <div class="question">
-            <p>Вопрос: {{ question.text }}
-            <p>Ответ: {{ question.answer }}
-            <p>Баллы: {{ question.points }}
-        </div>
-    {% endfor %}
+    {% if test.course.author == user %}
+        <h2>Вопросы</h2>
+        {% for question in question_set %}
+            <div class="question">
+                <p>Вопрос: {{ question.text }}
+                <p>Ответ: {{ question.answer }}
+                <p>Баллы: {{ question.points }}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Вопросов: {{ question_set.count }}
+        <p>Баллы за правильное решение: {{ total_points }}
+    {% endif %}
 
     <form method="POST">
         {% csrf_token %}
