@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
+from django.core.validators import MinValueValidator
 from django.db import models
-
 
 class Question(models.Model):
     class Meta:
@@ -47,8 +47,9 @@ class QuestionAnswer(models.Model):
         verbose_name='балл за правильный ответ'
     )
     scored_points = models.IntegerField(
-        default=-1,
-        verbose_name='полученный балл'
+        default=0,
+        verbose_name='полученный балл',
+        validators=[MinValueValidator(0), ]
     )
     testResult = models.ForeignKey('TestResult', on_delete=models.CASCADE)
 
