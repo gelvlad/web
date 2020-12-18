@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Проект по вебу{% endblock %}</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        {% if user.is_authenticated %}
+            <a href="/courses/">все курсы</a>
+            <a href="/test_results/">мои решения</a>
+            <a href="/user/courses/">мои курсы</a>
+            <a href="/accounts/logout/">выйти</a>
+        {% else %}
+            <a href="/accounts/login/">войти</a>
+            <a href="/accounts/register/">зарегистрироваться</a>
+        {% endif %}
+    </nav>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

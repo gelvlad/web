@@ -1,0 +1,12 @@
+{% extends "webproject/base.html" %}
+
+{% block title %}Решения тестов{% endblock %}
+
+{% block content %}
+    <h1>Ваши решения тестов</h1>
+    <ul class="nav-item-list">
+    {% for object in object_list %}
+        <li class="nav-item"><a href="{{ object.id }}/">{{ object.test.name }}: {{ object.date_time_created }}</a>
+    {% endfor %}
+    </ul>
+{% endblock %}

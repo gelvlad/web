@@ -1,0 +1,15 @@
+{%  extends "webproject/base.html" %}
+
+{% block title %}Тесты курса {{ course.name }}{% endblock %}
+
+{% block content %}
+    <h1>Тесты курса {{ course.name }}</h1>
+    <ul class="nav-item-list">
+    {% for object in object_list %}
+        <li class="nav-item"><a href="test/{{ object.id }}/">{{ object.name }}</a>
+    {% endfor %}
+    </ul>
+    {% if course.author == user %}
+        <a href="test/create/">Создать тест</a>
+    {% endif %}
+{% endblock %}

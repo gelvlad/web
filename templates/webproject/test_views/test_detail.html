@@ -1,0 +1,27 @@
+{% extends "webproject/base.html" %}
+
+{% block title %}Тест {{ test.name }}{% endblock %}
+
+{% block content %}
+    <h1>{{ test.name }}</h1>
+    <h2>Вопросы</h2>
+    {% for question in question_set %}
+        <div class="question">
+            <p>Вопрос: {{ question.text }}
+            <p>Ответ: {{ question.answer }}
+            <p>Баллы: {{ question.points }}
+        </div>
+    {% endfor %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <button id="start-test-button" type="submit">Начать тест</button>
+    </form>
+
+    {% if test.course.author == user %}
+        <div id="author-nav">
+            <a href="test_results/">Присланные решения</a>
+            <a href="update/">Изменить тест</a>
+        </div>
+    {% endif %}
+{% endblock %}

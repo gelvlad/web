@@ -1,0 +1,18 @@
+{% extends "webproject/base.html" %}
+
+{% block title %}Прохождение теста {{ object.test.name }}{% endblock %}
+
+{% block content %}
+    <h1>Решение теста {{ object.test.name }}</h1>
+
+    <form id="form-container" method="POST">
+        {% csrf_token %}
+        {{ question_answer_formset.management_form }}
+        {% for question_answer_form in question_answer_formset %}
+            <div class="question-answer-form">
+                {{ question_answer_form.as_p }}
+            </div>
+        {% endfor %}
+        <button type="submit">Завершить</button>
+    </form>
+{% endblock %}

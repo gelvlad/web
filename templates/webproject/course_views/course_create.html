@@ -1,0 +1,12 @@
+{% extends "webproject/base.html" %}
+
+{% block title %}Создание курса{% endblock %}
+
+{% block content %}
+    <h1>Создать новый курс</h1>
+    <form id="form-container" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Сохранить</button>
+    </form>
+{%  endblock %}

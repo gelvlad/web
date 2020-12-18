@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Войти</title>
+</head>
+<body>
+    {% if form.errors %}
+    <p>Неверные имя пользователя или пароль. Попробуйте еще раз.</p>
+    {% endif %}
+
+    {% if next %}
+        {% if user.is_authenticated %}
+        <p>У вас нет доступа к просмотру этой страницы.</p>
+        {% else %}
+        <p>Пожалуйста, войдите или зарегистрируйтесь, чтобы просматривать эту страницу.</p>
+        {% endif %}
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="войти">
+    </form>
+
+    <p><a href="{% url 'password_reset' %}">Забыли пароль?</a></p>
+</body>
+</html>

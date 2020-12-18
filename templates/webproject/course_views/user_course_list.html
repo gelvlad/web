@@ -1,0 +1,13 @@
+{% extends "webproject/base.html" %}
+
+{% block title %}Мои курсы{% endblock %}
+
+{% block content %}
+    <h1>Мои курсы</h1>
+    <ul class="nav-item-list">
+    {% for object in object_list %}
+        <li class="nav-item"><a href="/courses/{{ object.id }}/">{{ object.name }}</a>
+    {% endfor %}
+    </ul>
+    <a href="create/">Создать курс</a>
+{% endblock %}

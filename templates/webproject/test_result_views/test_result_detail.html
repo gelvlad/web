@@ -1,0 +1,17 @@
+{% extends "webproject/base.html" %}
+
+{% block title %}Решение теста {{ object.test.name }}{% endblock %}
+
+{% block content %}
+    <h1>Решение теста {{ object.test.name }}</h1>
+    <p>Баллы за тест: {{ scored_points }} из {{ total_points }}</p>
+
+    {% for question_answer in question_answers %}
+        <div class="question-answer">
+            <p>Вопрос: {{ question_answer.question_text }}
+            <p>Правильный ответ: {{ question_answer.correct_answer }}
+            <p>Данный ответ: {{ question_answer.given_answer }}
+            <p>Полученный балл: {{ question_answer.scored_points }} из {{ question_answer.total_points }}
+        </div>
+    {% endfor %}
+{% endblock %}
