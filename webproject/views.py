@@ -1,8 +1,8 @@
 # from django.contrib.auth.mixins import LoginRequiredMixin
 # from django.contrib.auth.decorators import login_required
 from django.db.models import Sum
-from django.shortcuts import render, redirect
-# from django.urls import reverse_lazy
+from django.http import Http404
+from django.shortcuts import redirect
 # from django.utils.decorators import method_decorator
 from django.views import generic
 from . import forms, models
@@ -112,9 +112,12 @@ class TestListView(generic.ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(object_list=object_list, **kwargs)
-        context['course'] = models.Course.objects.get(
-            id=self.kwargs['course_pk']
-        )
+        try:
+            context['course'] = models.Course.objects.get(
+                id=self.kwargs['course_pk']
+            )
+        except models.Course.DoesNotExist:
+            raise Http404('Course does not exist')
         return context
 
 
