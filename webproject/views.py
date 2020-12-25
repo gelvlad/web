@@ -9,8 +9,8 @@ from .permissions import CourseAuthorMixin, TestResultPermissionMixin
 
 
 class TestCreateView(
-    generic.CreateView,
     LoginRequiredMixin,
+    generic.CreateView,
     CourseAuthorMixin
 ):
     model = models.Test
@@ -52,8 +52,8 @@ class TestCreateView(
 
 
 class TestUpdateView(
-    generic.UpdateView,
     LoginRequiredMixin,
+    generic.UpdateView,
     CourseAuthorMixin
 ):
     model = models.Test
@@ -101,7 +101,7 @@ class TestUpdateView(
         return self.render_to_response(self.get_context_data())
 
 
-class UserCourseListView(generic.ListView, LoginRequiredMixin):
+class UserCourseListView(LoginRequiredMixin, generic.ListView):
     model = models.Course
     template_name = 'webproject/course_views/user_course_list.html'
 
@@ -122,7 +122,7 @@ class CourseCreateView(generic.CreateView, LoginRequiredMixin):
         return super().form_valid(form)
 
 
-class TestListView(generic.ListView, LoginRequiredMixin):
+class TestListView(LoginRequiredMixin, generic.ListView):
     model = models.Test
     template_name = 'webproject/test_views/test_list.html'
 
@@ -141,8 +141,8 @@ class TestListView(generic.ListView, LoginRequiredMixin):
 
 
 class TakeTestView(
-    generic.DetailView,
     LoginRequiredMixin,
+    generic.DetailView,
     TestResultPermissionMixin
 ):
     model = models.TestResult
@@ -184,7 +184,7 @@ class CourseListView(generic.ListView):
     template_name = 'webproject/course_views/course_list.html'
 
 
-class TestDetailView(generic.DetailView, LoginRequiredMixin):
+class TestDetailView(LoginRequiredMixin, generic.DetailView):
     model = models.Test
     pk_url_kwarg = 'test_pk'
     template_name = 'webproject/test_views/test_detail.html'
@@ -223,8 +223,8 @@ class TestDetailView(generic.DetailView, LoginRequiredMixin):
 
 
 class TestTestResultListView(
-    generic.ListView,
     LoginRequiredMixin,
+    generic.ListView,
     CourseAuthorMixin
 ):
     model = models.TestResult
@@ -253,7 +253,7 @@ class TestTestResultListView(
         return context
 
 
-class UserTestResultListView(generic.ListView, LoginRequiredMixin):
+class UserTestResultListView(LoginRequiredMixin, generic.ListView):
     model = models.TestResult
     template_name = 'webproject/test_result_views/user_test_result_list.html'
 
@@ -262,8 +262,8 @@ class UserTestResultListView(generic.ListView, LoginRequiredMixin):
 
 
 class TestResultDetailView(
-    generic.DetailView,
     LoginRequiredMixin,
+    generic.DetailView,
     TestResultPermissionMixin
 ):
     model = models.TestResult
