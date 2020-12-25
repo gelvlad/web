@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.core.validators import MinValueValidator
 from django.db import models
 
+
 class Question(models.Model):
     class Meta:
         ordering = ['id']

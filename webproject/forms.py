@@ -33,22 +33,6 @@ class QuestionAnswerForm(forms.ModelForm):
         self.fields['question_text'].disabled = True
 
 
-# class BaseQuestionAnswerFormset(forms.BaseFormSet):
-#     def __init__(self, *args, **kwargs):
-#         self.question_ids = kwargs.pop('question_ids')
-#         super().__init__(*args, **kwargs)
-#
-#     def clean(self):
-#         if any(self.errors):
-#             return
-#
-#         for form, question_id in zip(self.forms, self.question_ids):
-#             if self.can_delete and self._should_delete_form(form):
-#                 continue
-#             if form.instance.question__id != question_id:
-#                 raise forms.ValidationError('Question id has been changed') # TODO: words
-
-
 QuestionAnswerFormset = forms.modelformset_factory(
     model=models.QuestionAnswer,
     form=QuestionAnswerForm,

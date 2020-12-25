@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65b00fa7-9163-48cd-9c05-123733288dba" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/400.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/403_csrf.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webproject/permissions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproject/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webproject/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -41,7 +46,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jaCV2YZsAdeIHaxtKGeokKFEyb" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -52,17 +59,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ignore.virus.scanning.warn.message" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/webproject/course_views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Documents\PyProjects\web\templates\webproject\course_views" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Documents\PyProjects\web\templates" />
       <recent name="C:\Documents\PyProjects\web\templates\webproject\test_views" />
+      <recent name="C:\Documents\PyProjects\web\templates\webproject\course_views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents\PyProjects\web\templates" />
       <recent name="C:\Documents\PyProjects\web\templates\webproject\course_views" />
     </key>
   </component>
@@ -122,7 +130,7 @@
       <workItem from="1607610345932" duration="19845000" />
       <workItem from="1607975284735" duration="10613000" />
       <workItem from="1608132612999" duration="34881000" />
-      <workItem from="1608848899196" duration="1780000" />
+      <workItem from="1608848899196" duration="7938000" />
     </task>
     <servers />
   </component>
@@ -146,42 +154,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="543" y="215" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1607985620829" />
-    <state width="1058" height="466" key="DebuggerActiveHint" timestamp="1608273048953">
+    <state width="1058" height="466" key="DebuggerActiveHint" timestamp="1608862942107">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1058" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1608273048953" />
-    <state width="1493" height="227" key="GridCell.Tab.0.bottom" timestamp="1608385024844">
+    <state width="1058" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1608862942107" />
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608385024844" />
-    <state width="1493" height="227" key="GridCell.Tab.0.center" timestamp="1608385024844">
+    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608385024844" />
-    <state width="1493" height="227" key="GridCell.Tab.0.left" timestamp="1608385024844">
+    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608385024844" />
-    <state width="1493" height="227" key="GridCell.Tab.0.right" timestamp="1608385024844">
+    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="227" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608385024844" />
-    <state width="1493" height="205" key="GridCell.Tab.1.bottom" timestamp="1608385024841">
+    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.1.bottom" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608385024841" />
-    <state width="1493" height="205" key="GridCell.Tab.1.center" timestamp="1608385024840">
+    <state width="1493" height="205" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.1.center" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608385024840" />
-    <state width="1493" height="205" key="GridCell.Tab.1.left" timestamp="1608385024840">
+    <state width="1493" height="205" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.1.left" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608385024840" />
-    <state width="1493" height="205" key="GridCell.Tab.1.right" timestamp="1608385024840">
+    <state width="1493" height="205" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
+    <state width="1493" height="205" key="GridCell.Tab.1.right" timestamp="1608863303314">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608385024840" />
+    <state width="1493" height="205" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1608863303314" />
     <state width="1493" height="205" key="GridCell.Tab.2.bottom" timestamp="1608385024841">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

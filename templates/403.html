@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Недостаточно прав</title>
+</head>
+<body>
+    <h1>403!</h1>
+    <p>Недостаточно прав для просмотра страницы
+    {% if not user.is_authentiated %}
+        <p><a href="/accounts/login/">Войдите</a> или <a href="/accounts/register/">Зарегистрируйтесь</a>, чтобы увидеть эту страницу
+    {% endif %}
+</body>
+</html>
