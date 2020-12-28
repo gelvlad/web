@@ -14,16 +14,20 @@ class TestCreateView(
     fields = ['name']
     template_name = 'webproject/test_views/test_create.html'
 
+    @decorators.check_course_author
     def get(self, request, *args, **kwargs):
         return super().get(self, request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-
         question_formset = forms.QuestionsCreateFormset(
             queryset=models.Question.objects.none()
         )
         context['question_formset'] = question_formset
+        context['course'] = get_object_or_404(
+            models.Course,
+            id=self.kwargs['course_pk']
+        )
         return context
 
     def post(self, request, *args, **kwargs):

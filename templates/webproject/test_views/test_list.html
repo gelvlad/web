@@ -1,15 +1,22 @@
-{%  extends "webproject/base.html" %}
+{%  extends "webproject/base_navigable.html" %}
 
 {% block title %}Тесты курса {{ course.name }}{% endblock %}
 
+{% block breadcrumb-items %}
+    <li><a href="/courses">Курсы</a></li>
+    <li><a href="/courses/{{ course.id }}">{{ course.name }}</a></li>
+{% endblock %}
+
 {% block content %}
-    <h1>Тесты курса {{ course.name }}</h1>
-    <ul class="nav-item-list">
+    <h1 class="title">Тесты курса <b>{{ course.name }}</b></h1>
+    <div>
     {% for object in object_list %}
-        <li class="nav-item"><a href="test/{{ object.id }}/">{{ object.name }}</a>
+        <a class="box" href="test/{{ object.id }}/">{{ object.name }}</a>
     {% endfor %}
-    </ul>
+    </div>
     {% if course.author == user %}
-        <a href="test/create/">Создать тест</a>
+        <div class="block mt-5">
+            <a class="button is-link is-light is-fullwidth" href="test/create/">Создать тест</a>
+        </div>
     {% endif %}
 {% endblock %}

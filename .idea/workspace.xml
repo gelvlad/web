@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65b00fa7-9163-48cd-9c05-123733288dba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webproject/permissions/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webproject/views/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webproject/views/course.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webproject/views/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webproject/views/test_result.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/webproject/base_navigable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webproject/permissions.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/permissions/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webproject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webproject/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/course_views/course_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/course_views/course_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/course_views/course_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/course_views/course_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/course_views/user_course_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/course_views/user_course_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/test_views/test_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_views/test_create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/test_views/test_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_views/test_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/test_views/test_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_views/test_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproject/permissions/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/permissions/decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproject/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webproject/views/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/views/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -66,14 +67,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Documents\PyProjects\web\templates" />
+      <recent name="C:\Documents\PyProjects\web\templates\webproject\course_views" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Documents\PyProjects\web\webproject\permissions" />
       <recent name="C:\Documents\PyProjects\web\templates" />
       <recent name="C:\Documents\PyProjects\web\templates\webproject\test_views" />
-      <recent name="C:\Documents\PyProjects\web\templates\webproject\course_views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Documents\PyProjects\web\templates" />
       <recent name="C:\Documents\PyProjects\web\templates\webproject\course_views" />
     </key>
   </component>
@@ -133,7 +134,9 @@
       <workItem from="1607610345932" duration="19845000" />
       <workItem from="1607975284735" duration="10613000" />
       <workItem from="1608132612999" duration="34881000" />
-      <workItem from="1608848899196" duration="18884000" />
+      <workItem from="1608848899196" duration="19017000" />
+      <workItem from="1609014255593" duration="3167000" />
+      <workItem from="1609104062123" duration="16897000" />
     </task>
     <servers />
   </component>
@@ -161,38 +164,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1058" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1608862942107" />
-    <state width="1493" height="205" key="GridCell.Tab.0.bottom" timestamp="1609013616531">
+    <state width="1493" height="211" key="GridCell.Tab.0.bottom" timestamp="1609155476080">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609013616531" />
-    <state width="1493" height="205" key="GridCell.Tab.0.center" timestamp="1609013616531">
+    <state width="1493" height="211" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609155476080" />
+    <state width="1493" height="211" key="GridCell.Tab.0.center" timestamp="1609155476080">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609013616531" />
-    <state width="1493" height="205" key="GridCell.Tab.0.left" timestamp="1609013616531">
+    <state width="1493" height="211" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609155476080" />
+    <state width="1493" height="211" key="GridCell.Tab.0.left" timestamp="1609155476080">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609013616531" />
-    <state width="1493" height="205" key="GridCell.Tab.0.right" timestamp="1609013616531">
+    <state width="1493" height="211" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609155476080" />
+    <state width="1493" height="211" key="GridCell.Tab.0.right" timestamp="1609155476080">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609013616531" />
-    <state width="1493" height="205" key="GridCell.Tab.1.bottom" timestamp="1609013616421">
+    <state width="1493" height="211" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609155476080" />
+    <state width="1493" height="211" key="GridCell.Tab.1.bottom" timestamp="1609155475955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609013616421" />
-    <state width="1493" height="205" key="GridCell.Tab.1.center" timestamp="1609013616421">
+    <state width="1493" height="211" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609155475955" />
+    <state width="1493" height="211" key="GridCell.Tab.1.center" timestamp="1609155475955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609013616421" />
-    <state width="1493" height="205" key="GridCell.Tab.1.left" timestamp="1609013616421">
+    <state width="1493" height="211" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1609155475955" />
+    <state width="1493" height="211" key="GridCell.Tab.1.left" timestamp="1609155475955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609013616421" />
-    <state width="1493" height="205" key="GridCell.Tab.1.right" timestamp="1609013616421">
+    <state width="1493" height="211" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1609155475955" />
+    <state width="1493" height="211" key="GridCell.Tab.1.right" timestamp="1609155475955">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="205" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609013616421" />
+    <state width="1493" height="211" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1609155475955" />
     <state width="1493" height="205" key="GridCell.Tab.2.bottom" timestamp="1608385024841">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -217,18 +220,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="94" y="73" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1609013327536" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1608848937081">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1609105361674">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1608848937081" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1609105361674" />
     <state x="408" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1608141447697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="408" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1608141447697" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609010833875">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1609166521645">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609010833875" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1609166521645" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

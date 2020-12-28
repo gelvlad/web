@@ -1,27 +1,33 @@
-{% extends "webproject/base.html" %}
+{% extends "webproject/base_navigable.html" %}
 
 {% block title %}Создание теста{% endblock %}
 
+{% block breadcrumb-items %}
+    <li><a href="/courses">Курсы</a></li>
+    <li><a href="/courses/{{ course.id }}">{{ course.name }}</a></li>
+    <li><a href=".">Создать тест</a></li>
+{% endblock %}
+
 {% block content %}
-    <h1>Новый тест</h1>
+    <h1 class="title">Новый тест</h1>
     <form id="form-container" method="POST">
         {% csrf_token %}
-        <div class="test-form">
+        <div class="test-form block">
             {{ form.as_p }}
         </div>
         {{ question_formset.management_form }}
         {% for question_form in question_formset %}
-            <div class="question-form">
+            <div class="question-form box">
                 <ul>
-                    <li> Вопрос: {{ question_form.text }}
+                    <li class="field"> Вопрос: {{ question_form.text }}
                     {% for error in  question_form.text.errors %}
                         {{ error }}
                     {% endfor %}
-                    <li> Ответ: {{ question_form.answer }}
+                    <li class="field"> Ответ: {{ question_form.answer }}
                     {% for error in  question_form.answer.errors %}
                         {{ error }}
                     {% endfor %}
-                    <li> Баллы: {{ question_form.points }}
+                    <li class="field"> Баллы: {{ question_form.points }}
                     {% for error in  question_form.points.errors %}
                         {{ error }}
                     {% endfor %}
@@ -38,11 +44,11 @@
 
 {% block scripts %}
     <template id="question-form-template">
-        <div class="question-form">
+        <div class="question-form box">
             <ul>
-                <li> Вопрос: {{ question_formset.empty_form.text }}
-                <li> Ответ: {{ question_formset.empty_form.answer }}
-                <li> Баллы: {{ question_formset.empty_form.points }}
+                <li class="field"> Вопрос: {{ question_formset.empty_form.text }}
+                <li class="field"> Ответ: {{ question_formset.empty_form.answer }}
+                <li class="field"> Баллы: {{ question_formset.empty_form.points }}
             </ul>
             <div class="delete-box" hidden> {{ question_formset.empty_form.DELETE }} </div>
             <button id="{{ question_formset.empty_form.prefix }}-delete" type="button" onclick="deleteForm(this)">-</button>

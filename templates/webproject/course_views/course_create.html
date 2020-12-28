@@ -3,8 +3,8 @@
 {% block title %}Создание курса{% endblock %}
 
 {% block content %}
-    <h1>Создать новый курс</h1>
-    <form id="form-container" method="POST">
+    <h1 class="title">Создать новый курс</h1>
+    <form id="form-container" class="control" method="POST">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Сохранить</button>

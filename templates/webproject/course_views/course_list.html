@@ -3,10 +3,10 @@
 {% block title %}Все курсы{% endblock %}
 
 {% block content %}
-    <h1>Доступные курсы</h1>
-    <ul class="nav-item-list">
+    <h1 class="title">Доступные курсы</h1>
+    <div>
     {% for object in object_list %}
-        <li class="nav-item"><a href="{{ object.id }}/">{{ object.name }}</a>
+        <a class="box" href="{{ object.id }}/">{{ object.name }}</a>
     {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

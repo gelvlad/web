@@ -1,6 +1,12 @@
-{% extends "webproject/base.html" %}
+{% extends "webproject/base_navigable.html" %}
 
 {% block title %}Тест {{ test.name }}{% endblock %}
+
+{% block breadcrumb-items %}
+    <li><a href="/courses">Курсы</a></li>
+    <li><a href="/courses/{{ test.course.id }}">{{ test.course.name }}</a></li>
+    <li><a href="/courses/{{ test.course.id }}/test/{{ test.id }}">{{ test.name }}</a></li>
+{% endblock %}
 
 {% block content %}
     <h1>{{ test.name }}</h1>
