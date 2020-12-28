@@ -68,6 +68,7 @@ class TestUpdateView(
             queryset=self.object.question_set.all()
         )
         context['question_formset'] = question_formset
+        context['course'] = self.object.course
         return context
 
     @decorators.check_test_author
@@ -80,6 +81,10 @@ class TestUpdateView(
         )
 
         if form.is_valid() and question_formset.is_valid():
+            if 'delete_test' in request.POST:
+                self.object.delete()
+                return redirect(f"/courses/{self.kwargs['course_pk']}")
+
             form.save()
             for question_form in question_formset.deleted_forms:
                 if question_form.instance.id:

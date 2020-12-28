@@ -18,41 +18,111 @@
         {{ question_formset.management_form }}
         {% for question_form in question_formset %}
             <div class="question-form box">
-                <ul>
-                    <li class="field"> Вопрос: {{ question_form.text }}
-                    {% for error in  question_form.text.errors %}
-                        {{ error }}
-                    {% endfor %}
-                    <li class="field"> Ответ: {{ question_form.answer }}
-                    {% for error in  question_form.answer.errors %}
-                        {{ error }}
-                    {% endfor %}
-                    <li class="field"> Баллы: {{ question_form.points }}
-                    {% for error in  question_form.points.errors %}
-                        {{ error }}
-                    {% endfor %}
-                </ul>
-                <div class="delete-box" hidden>{{ question_form.DELETE }}</div>
-                <button id="{{ question_form.prefix }}-delete" type="button" onclick="deleteForm(this)">-</button>
+                <div class="tile is-ancestor">
+                    <div class="tile is-vertical">
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <label class="label">Вопрос</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control is-expanded">
+                                        {{ question_form.text }}
+                                    </div>
+                                    {% for error in  question_form.text.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <label class="label">Ответ</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control is-expanded">
+                                        {{ question_form.answer }}
+                                    </div>
+                                    {% for error in  question_form.answer.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field is-horizontal">
+                            <div class="field-label">
+                                <label class="label">Баллы</label>
+                            </div>
+                            <div class="field-body">
+                                <div class="field">
+                                    <div class="control is-expanded">
+                                        {{ question_form.points }}
+                                    </div>
+                                    {% for error in  question_form.points.errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delete-box" hidden>{{ question_form.DELETE }}</div>
+                    <button id="{{ question_form.prefix }}-delete" type="button" class="delete tile mt-2" onclick="deleteForm(this)">-</button>
+                </div>
             </div>
-        {{ question_form.non_field_errors }}
+            {{ question_form.non_field_errors }}
         {% endfor %}
-        <button id="add-form" type="button">+</button>
-        <button type="submit">Сохранить</button>
+        <div class="block"><button id="add-form" type="button" class="button is-info is-outlined">+</button></div>
+        <div class="block"><button type="submit" class="button is-success is-outlined">Сохранить</button></div>
     </form>
 {% endblock %}
 
 {% block scripts %}
     <template id="question-form-template">
         <div class="question-form box">
-            <ul>
-                <li class="field"> Вопрос: {{ question_formset.empty_form.text }}
-                <li class="field"> Ответ: {{ question_formset.empty_form.answer }}
-                <li class="field"> Баллы: {{ question_formset.empty_form.points }}
-            </ul>
-            <div class="delete-box" hidden> {{ question_formset.empty_form.DELETE }} </div>
-            <button id="{{ question_formset.empty_form.prefix }}-delete" type="button" onclick="deleteForm(this)">-</button>
-        </div>;
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical">
+                    <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Вопрос</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control is-expanded">
+                                    {{ question_formset.empty_form.text }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Ответ</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control is-expanded">
+                                    {{ question_formset.empty_form.answer }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field is-horizontal">
+                        <div class="field-label">
+                            <label class="label">Баллы</label>
+                        </div>
+                        <div class="field-body">
+                            <div class="field">
+                                <div class="control is-expanded">
+                                    {{ question_formset.empty_form.points }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delete-box" hidden>{{ question_formset.empty_form.DELETE }}</div>
+                <button id="{{ question_formset.empty_form.prefix }}-delete" type="button" class="delete tile mt-2" onclick="deleteForm(this)">-</button>
+                </div>
+            </div>
     </template>
 
 
@@ -69,13 +139,13 @@
         function addForm(e) {
             let newForm = template_form.cloneNode(true);
             newForm.innerHTML = newForm.innerHTML.replace(/form-__prefix__/g, `form-${++lastPrefix}`);
-            container.insertBefore(newForm, addButton);
+            container.insertBefore(newForm, addButton.parentElement);
             totalForms.setAttribute('value', `${ lastPrefix + 1 }`)
         }
 
         function deleteForm(caller) {
             let caller_form = caller.parentElement;
-            caller_form.hidden = true;
+            caller_form.parentElement.hidden = true;
             let delete_box = caller_form.querySelector('.delete-box');
             delete_box.children[0].checked = true;
         }
