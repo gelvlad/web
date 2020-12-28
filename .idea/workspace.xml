@@ -2,25 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65b00fa7-9163-48cd-9c05-123733288dba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/400.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/400.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/403_csrf.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/403_csrf.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/base_navigable.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/base_navigable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/course_views/course_create.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/course_views/course_create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/test_result_views/take_test.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_result_views/take_test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/test_result_views/test_result_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_result_views/test_result_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/test_result_views/test_test_result_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_result_views/test_test_result_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/test_result_views/user_test_result_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_result_views/user_test_result_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/webproject/test_views/test_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/test_views/test_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webproject/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webproject/permissions/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/permissions/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webproject/views/test_result.py" beforeDir="false" afterPath="$PROJECT_DIR$/webproject/views/test_result.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/webproject/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/webproject/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +126,7 @@
       <workItem from="1608132612999" duration="34881000" />
       <workItem from="1608848899196" duration="19017000" />
       <workItem from="1609014255593" duration="3167000" />
-      <workItem from="1609104062123" duration="28265000" />
+      <workItem from="1609104062123" duration="29502000" />
     </task>
     <servers />
   </component>
