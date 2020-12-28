@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Ошибка токена</title>
-</head>
-<body>
-    <h1>403!</h1>
-    <p>Csrf токен не совпадает
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}403{% endblock %}
+{% block content %}
+    <div class="content mt-6">
+        <h1 class="title">403!</h1>
+        <p>Csrf токен не совпадает
+    </div>
+{% endblock %}

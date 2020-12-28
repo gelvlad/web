@@ -34,8 +34,7 @@ def check_course_kwarg(func):
 
 def check_taken_by_user(func):
     def inner(self, *args, **kwargs):
-        if not self.object:
-            self.object = self.get_object()
+        self.object = self.get_object()
         if not self.object.taken_by == self.request.user:
             raise PermissionDenied
         return func(self, *args, **kwargs)
@@ -44,8 +43,7 @@ def check_taken_by_user(func):
 
 def check_result_is_active(func):
     def inner(self, *args, **kwargs):
-        if not self.object:
-            self.object = self.get_object()
+        self.object = self.get_object()
         if not self.object.isActive:
             raise PermissionDenied
         return func(self, *args, **kwargs)

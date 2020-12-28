@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Ошибка сервера</title>
-</head>
-<body>
-    <h1>500!</h1>
-    <p>Ошибка сервера
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}500{% endblock %}
+{% block content %}
+    <div class="content mt-6">
+        <h1 class="title">500!</h1>
+        <p>Ошибка сервера
+    </div>
+{% endblock %}

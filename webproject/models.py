@@ -64,6 +64,8 @@ class QuestionAnswer(models.Model):
 
 
 class TestResult(models.Model):
+    class Meta:
+        ordering = ['-date_time_created']
     isActive = models.BooleanField(default=True)
     taken_by = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     test = models.ForeignKey(Test, on_delete=models.CASCADE)

@@ -3,8 +3,8 @@
 {% block title %}Решения теста {{ test.name }}{% endblock %}
 
 {% block content %}
-    <h1>Решения теста {{ test.name }}</h1>
-    <ul class="nav-item-list">
+    <h1 class="title">Решения теста <b>{{ test.name }}</b></h1>
+    <ul class="nav-item-list content">
     {% for object in object_list %}
         <li class="nav-item"><a href="/test_results/{{ object.id }}/">{{ object.taken_by.username }}: {{ object.date_time_created }}</a>
     {% endfor %}

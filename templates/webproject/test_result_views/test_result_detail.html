@@ -3,15 +3,17 @@
 {% block title %}Решение теста {{ object.test.name }}{% endblock %}
 
 {% block content %}
-    <h1>Решение теста {{ object.test.name }}</h1>
-    <p>Баллы за тест: {{ scored_points }} из {{ total_points }}</p>
+    <h1 class="title">Решение теста <b>{{ object.test.name }}</b></h1>
+    <div class="content">
+        <p>Баллы за тест: {{ scored_points }} из {{ total_points }}</p>
+    </div>
 
     {% for question_answer in question_answers %}
-        <div class="question-answer">
-            <p>Вопрос: {{ question_answer.question_text }}
-            <p>Правильный ответ: {{ question_answer.correct_answer }}
-            <p>Данный ответ: {{ question_answer.given_answer }}
-            <p>Полученный балл: {{ question_answer.scored_points }} из {{ question_answer.total_points }}
+        <div class="question-answer box content">
+            <p><b>Вопрос:</b> {{ question_answer.question_text }}
+            <p><b>Правильный ответ:</b> {{ question_answer.correct_answer }}
+            <p><b>Данный ответ:</b> {{ question_answer.given_answer }}
+            <p><b>Полученный балл:</b> {{ question_answer.scored_points }} из {{ question_answer.total_points }}
         </div>
     {% endfor %}
 {% endblock %}

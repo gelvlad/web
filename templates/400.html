@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Bad request</title>
-</head>
-<body>
-    <h1>404!</h1>
-    <p>Bad request
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}400{% endblock %}
+{% block content %}
+    <div class="content mt-6">
+        <h1 class="title">400!</h1>
+        <p>Bad request
+    </div>
+{% endblock %}

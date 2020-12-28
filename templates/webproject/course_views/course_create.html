@@ -4,9 +4,11 @@
 
 {% block content %}
     <h1 class="title">Создать новый курс</h1>
-    <form id="form-container" class="control" method="POST">
+    <form id="form-container" method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Сохранить</button>
+        <div class="block">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="button is-success is-outlined">Сохранить</button>
     </form>
 {%  endblock %}

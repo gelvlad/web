@@ -14,7 +14,7 @@ class TakeTestView(LoginRequiredMixin, generic.DetailView):
     @decorators.check_taken_by_user
     @decorators.check_result_is_active
     def get(self, request, *args, **kwargs):
-        super().get(self, request, *args, **kwargs)
+        return super().get(self, request, *args, **kwargs)
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

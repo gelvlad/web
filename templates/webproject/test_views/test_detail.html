@@ -9,30 +9,32 @@
 {% endblock %}
 
 {% block content %}
-    <h1>{{ test.name }}</h1>
+    <h1 class="title">Тест <b>{{ test.name }}</b></h1>
     {% if test.course.author == user %}
-        <h2>Вопросы</h2>
+        <h2 class="subtitle">Вопросы</h2>
         {% for question in question_set %}
-            <div class="question">
-                <p>Вопрос: {{ question.text }}
-                <p>Ответ: {{ question.answer }}
-                <p>Баллы: {{ question.points }}
+            <div class="question box content">
+                <p><b>Вопрос:</b> {{ question.text }}
+                <p><b>Ответ:</b> {{ question.answer }}
+                <p><b>Баллы:</b> {{ question.points }}
             </div>
         {% endfor %}
     {% else %}
-        <p>Вопросов: {{ question_set.count }}
-        <p>Баллы за правильное решение: {{ total_points }}
+        <div class="block content">
+            <p>Вопросов: {{ question_set.count }}
+            <p>Баллов за правильное решение: {{ total_points }}
+        </div>
     {% endif %}
 
-    <form method="POST">
+    <form method="POST" class="block">
         {% csrf_token %}
-        <button id="start-test-button" type="submit">Начать тест</button>
+        <button id="start-test-button" type="submit" class="button is-warning">Начать тест</button>
     </form>
 
     {% if test.course.author == user %}
-        <div id="author-nav">
-            <a href="test_results/">Присланные решения</a>
-            <a href="update/">Редактировать тест</a>
+        <div class="block buttons">
+            <a href="test_results/" class="button is-dark is-outlined">Присланные решения</a>
+            <a href="update/" class="button is-link is-outlined">Редактировать тест</a>
         </div>
     {% endif %}
 {% endblock %}

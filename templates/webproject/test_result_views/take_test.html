@@ -3,16 +3,16 @@
 {% block title %}Прохождение теста {{ object.test.name }}{% endblock %}
 
 {% block content %}
-    <h1>Решение теста {{ object.test.name }}</h1>
+    <h1 class="title">Решение теста <b>{{ object.test.name }}</b></h1>
 
     <form id="form-container" method="POST">
         {% csrf_token %}
         {{ question_answer_formset.management_form }}
         {% for question_answer_form in question_answer_formset %}
-            <div class="question-answer-form">
+            <div class="question-answer-form box">
                 {{ question_answer_form.as_p }}
             </div>
         {% endfor %}
-        <button type="submit">Завершить</button>
+        <button type="submit" class="button is-warning">Завершить</button>
     </form>
 {% endblock %}
