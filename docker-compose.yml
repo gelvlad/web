@@ -9,9 +9,9 @@ services:
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: ./wait-for-it.sh db:5432 -- /bin/bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
     volumes:
-      - .:/code
+      - .:/web
     ports:
       - "8000:8000"
     depends_on:
