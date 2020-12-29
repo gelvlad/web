@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '85mrv*urg(j3)8-0hy1)tbh*s4pk^*!466!=1vl2i3d3mwcnr('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -77,12 +77,18 @@ WSGI_APPLICATION = 'web.wsgi.application'
 
 DATABASES = {
     'default': {
+        # 'ENGINE': 'django.db.backends.postgresql',
+        # 'USER': 'rlcjxxut',
+        # 'PASSWORD': '1MFOdtqfpV-nNpuIlijUY6PrdeGV7Jl4',
+        # 'NAME': 'rlcjxxut',
+        # 'HOST': 'hattie.db.elephantsql.com',
+        # 'PORT': '5432',
         'ENGINE': 'django.db.backends.postgresql',
-        'USER': 'rlcjxxut',
-        'PASSWORD': '1MFOdtqfpV-nNpuIlijUY6PrdeGV7Jl4',
-        'NAME': 'rlcjxxut',
-        'HOST': 'hattie.db.elephantsql.com',
-        'PORT': '5432',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',
+        'PORT': 5432,
         'ATOMIC_REQUESTS': True,
     }
 }
